@@ -1,46 +1,17 @@
-﻿Objetivo
+﻿The commit message should be structured as follows:
 
-Establecer un conjunto de normas y convenciones de codificación para garantizar la coherencia, legibilidad y mantenibilidad del código fuente del proyecto.
+<type>[optional scope]: <description>
 
+[optional body]
 
-Convenciones de Codificación
+[optional footer(s)]
 
+The commit contains the following structural elements, to communicate intent to the consumers of your library:
 
-Indentación
-Utilizar 4 espacios para cada nivel de indentación.
-Evitar el uso de tabuladores.
+    fix: a commit of the type fix patches a bug in your codebase (this correlates with PATCH in Semantic Versioning).
+    feat: a commit of the type feat introduces a new feature to the codebase (this correlates with MINOR in Semantic Versioning).
+    BREAKING CHANGE: a commit that has a footer BREAKING CHANGE:, or appends a ! after the type/scope, introduces a breaking API change (correlating with MAJOR in Semantic Versioning). A BREAKING CHANGE can be part of commits of any type.
+    types other than fix: and feat: are allowed, for example @commitlint/config-conventional (based on the Angular convention) recommends build:, chore:, ci:, docs:, style:, refactor:, perf:, test:, and others.
+    footers other than BREAKING CHANGE: <description> may be provided and follow a convention similar to git trailer format.
 
-
-
-Nombres de Variables y Constantes
-
-Nombres descriptivos: Los nombres de variables y constantes deben ser claros y concisos, reflejando su propósito.
-
-snake_case: Utilizar snake_case para nombres de variables y constantes (ejemplo: nombre_completo, año_fabricacion).
-
-MAYUSCULAS_CON_GUIONES_BAJOS: Utilizar MAYUSCULAS_CON_GUIONES_BAJOS para constantes (ejemplo: MAX_VELOCIDAD).
-Nombres de Clases
-
-PascalCase: Utilizar PascalCase para nombres de clases (ejemplo: Vehiculo, HistorialMantenimiento).
-Nombres de Métodos
-
-camelCase: Utilizar camelCase para nombres de métodos (ejemplo: getMarca, setModelo).
-Comentarios
-
-Comentarios concisos: Utilizar comentarios para explicar secciones de código complejas o no obvias.
-
-Docstrings: Utilizar docstrings para documentar clases, métodos y funciones.
-Comentarios actualizados: Mantener los comentarios actualizados al realizar cambios en el código.
-
-
-Espacios en blanco
-
-Utilizar espacios en blanco para mejorar la legibilidad del código.
-Colocar un espacio antes y después de los operadores (=, +, -, *, /, etc.).
-Dejar una línea en blanco entre funciones y clases.
-
-
-Formato
-Límites de longitud: Limitar la longitud de las líneas a 80 caracteres.
-
-Agrupación de llaves: Colocar la llave de apertura en la misma línea que la declaración de la función o clase, y la llave de cierre en una línea separada, alineada con la primera.
+Additional types are not mandated by the Conventional Commits specification, and have no implicit effect in Semantic Versioning (unless they include a BREAKING CHANGE). A scope may be provided to a commit’s type, to provide additional contextual information and is contained within parenthesis, e.g., feat(parser): add ability to parse arrays.
