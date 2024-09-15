@@ -1,4 +1,4 @@
-﻿Objetivo
+Objetivo
 
 Establecer un conjunto de normas y convenciones de codificación para garantizar la coherencia, legibilidad y mantenibilidad del código fuente del proyecto.
 
